@@ -1,6 +1,9 @@
 def get_int_input():
     return list(map(int, input().split()))
+
+
 n_tests = int(input())
+
 
 def get_max_n_houses(prices, budget):
     prices.sort()
@@ -14,6 +17,7 @@ def get_max_n_houses(prices, budget):
         n_houses += 1
     return n_houses
 
+
 n_houses = []
 budgets = []
 price_lists = []
@@ -23,9 +27,6 @@ for i in range(n_tests):
     budgets.append(budget)
     price_lists.append(get_int_input())
 
-# print(n_houses, budgets, price_lists)
 for i in range(n_tests):
     max_count = get_max_n_houses(price_lists[i], budgets[i])
     print('Case #{}: {}'.format(i+1, max_count))
-
-
